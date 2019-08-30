@@ -1,0 +1,240 @@
+% -------------------------------------------------------------------
+% APA-Style thesis LaTeX Template
+% AUTHOR: Álvaro "Gondolindrim" Volpato (alvaro.volpato@usp.br)
+% VERSION: 1.1
+% PAGE: http://github.com/Gondolindrim/apaThesis
+% LICENSE: Creative-Commons Non-commercial Share-Alike
+%--------------------------------------------------------------------
+
+% This is an example of document using the apaThesis class file,
+% for a thesis that fits the American Phychology Association standards, described in 
+
+% American Psychology Association (2009). Publication Manual of the American Psychological Association, sixth edition.
+
+% It is supposed to be used as a template for a masters or PhD thesis. It was written in VIM and it contains
+% folding data (the three "{") in the text. To enable this folding, type in vim:
+
+% :setfoldmethod=marker
+
+\documentclass[a4paper]{apaThesis}
+
+% -----------------------------------------------
+% (1) DOCUMENT DATA {{{1
+% -----------------------------------------------
+
+% Title and author
+\title{APA Thesis LaTeX template}
+\author{Álvaro Augusto Volpato}
+\place{São Carlos, Brazil}
+\writingdate{March 2019}
+\affiliation{%
+  University of São Paulo
+  \par
+  São Carlos School of Engineering
+  \par
+  Department of Electrical and Computer Engineering}
+\advisor{Professor Dr. Luís Fernando Costa Alberto}
+\preamble{Template document developed for thesis documents fulfilling the guidelines of the Publication Manual of the American Psychology Association, Sixth Edition}
+
+\begin{document}
+
+% -----------------------------------------------
+% (2) PRETEXTUAL ELEMENTS {{{1
+% -----------------------------------------------
+
+% PRINTING TITLE PAGE
+\printtitlepage
+
+% PRINTING FRONT MATTER
+\printfrontmatter
+
+% SECOND FRONT MATTER IN SECOND LANGUAGE
+% If this second frontmatter is not needed, comment lines 53-62.
+% The anotherfrontmatter command takes seven arguments and prints a second frontmatter with them, without however changing the \title, \author, \place, \affiliation, \advisor keys which were defined previously.
+% For its code, see line 544 of the class file apaThesis.cls .
+\anotherfrontmatter
+{Template de tese no estilo APA}%
+{\theauthor}%
+{São Carlos, Brasil}%
+{Março de 2019}%
+{Universidade de São Paulo \par %
+Escola de Engenharia de São Carlos \par%
+Departamento de Engenharia Elétrica e de Computação}%
+{Professor Luís Fernando Costa Alberto}%
+{Documento padronizado (``template'') desenvolvido para uso em teses segundo o Manual de Publicações da Associação Americana de Psicologia, Sexta Edição.}
+
+% CATALOGRAPHIC CARD
+% I was not able to make a program for this as it can differ wildly between countries -- some won't even need one; therefore, unfortunately I was not able to make a macro or a custom command for this and it has to be edited manually. This is a widely used template, but please check if it fulfills the requirements of your institution and edit however needed.
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+\noindent\fbox{%
+	\parbox{0.9\textwidth}{%
+		\leftskip0.05\textwidth
+		\vspace*{1cm}
+		\parbox{0.8\textwidth}{%
+		\ttfamily\footnotesize
+		Volpato, Álvaro Augusto
+
+		\begingroup\addtolength{\parindent}{2em}
+
+			\thetitle\hphantom{ } / \theauthor; advisor Luís Fernando Costa Alberto - São Carlos 2019.			
+
+			\thelastpage\hphantom{} p.\\
+
+			Dissertation (Master's Degree - Graduate Program in Electrical Engineering) -- São Carlos School of Engineering, University of São Paulo - Brazil, 2019\\
+
+			1. LaTeX. 2. American Psychology Association. I. Alberto, Luís Fernando Costa, advisor. II. Title.
+
+		\endgroup
+		\vspace*{1cm}
+    }%
+}
+}
+\end{center}
+
+\cleardoublepage
+
+% -----------------------------------------------
+% (3) ABSTRACTS {{{1
+% -----------------------------------------------
+%\pagestyle{plain}
+
+% In order to handle many abstracts in various languages, the "newabstract" environment was created, defined in lines 460-467 of the classe file "apaThesis.cls".
+% Each time a new abstract is added, all that is needed is:
+% \begin{newabstract}{<abstract name in that language>} 
+% 	ABSTRACT CONTENT \\
+% \noindent
+% \textbf{<Keyword name in that language>}: keywords
+% \end{newabstract}
+% \newpage	
+
+% (4.1) IN ENGLISH
+\begin{newabstract}{Abstract}
+	This is the abstract in english. \\
+\noindent
+\textbf{Keywords}: keyword 1, keyword 2, keyword 3 ...
+\end{newabstract}
+\newpage
+
+% (4.2) AUS DEUTSCH
+\begin{newabstract}{Zusammenfassung}
+Zusammenfassung aus Deutsch. \\
+
+\noindent
+\textbf{Stichwörter}: Stichwort 1, Stichwort 2,...
+\end{newabstract}
+\newpage
+
+% (4.3) EM PORTUGUÊS
+\begin{newabstract}{Resumo}
+	Resumo em português. \\
+\noindent
+\textbf{Palavras-chave}: palavra-chave 1, palavra-chave 2, ...
+\end{newabstract}
+
+% -----------------------------------------------
+% (4) LISTS OF FIGURES, TABLES, SYMBOLS AND ACRONYMS {{{1
+% -----------------------------------------------
+% Figures and tables will be automatically added as they appear in text.
+
+% LIST OF FIGURES
+\listoffigures
+\cleardoublepage
+
+% LIST OF TABLES
+\listoftables
+\cleardoublepage
+
+% -----------------------------------------------
+% LIST OF ABBRV. AND SYMBOLS
+% -----------------------------------------------
+% This piece of code centralizes the LoA and LoS names, putting them in a HUGE and boldfaced font.
+% I was not able to insert this inside a \newenvironment, because this snippet messes with the
+% @makeschapter macro, which parameter #1 conflicts with the parameter number definition of the
+% newenvironment giving a "Illegal number definition" error. 
+
+\begingroup
+	\makeatletter
+		\def\chapter{\cleardoublepage\secdef\@chapter\@schapter}
+		\def\@makeschapterhead#1{{\center\HUGE\sffamily\bfseries #1\par\nobreak\vskip 10\p@\vspace*{5mm} }}
+	\makeatother
+
+% The LoA and LoS can be removed by commenting their respective lines if not needed.
+% Defining acronyms
+\begin{acronyms}
+	\acronym{OMIB}{One Machine Infinite Bus System}
+	\acronym{CG}{Centralized Generation}
+	\acronym{DG}{Distributed Generation}
+	\acronym{RPGTs}{Renewable Power Generation Technologies}
+	\acronym{MASs}{Multi-Agent Systems}
+	\acronym{EPSs}{Electric Power Systems}
+	\acronym{ESSs}{Energy Storage Systems}
+	\acronym{MPPT}{Maximum Power Point Tracking}
+	\acronym{PV}{Photovoltaic}
+	\acronym{PBD}{Pinning-based Droop}
+	\acronym{SM}{Synchronous Machine}
+	\acronym{OAM}{One-Axis Model}
+	\acronym{ICMPPT}{Incremental Conductance Maximum Power Point Tracking}
+\end{acronyms}
+
+\begin{listofsymbols}
+	\item[$ \Gamma $] Gamma greek letter
+	\item[$ \Lambda $] Lambda greek letter
+	\item[$ \zeta $] Lowercase Zeta greek letter
+	\item[$ \in $] Set theory belonging/contained in relation
+	\item[$|\cdot|$] Complex absolute value
+	\item[$\lVert \cdot \rVert$] Complex vector or matrix euclidian norm
+\end{listofsymbols}
+
+\endgroup
+
+% -----------------------------------------------
+% (5) TABLE OF CONTENTS {{{1
+% -----------------------------------------------
+
+\tableofcontents*
+\cleardoublepage
+
+% Redefine plain style
+\pagestyle{fancy}
+
+% -----------------------------------------------
+% (6) EPIGRAPH {{{1
+% -----------------------------------------------
+
+\begin{newepigraph}
+``An optimist will tell you the glass is half-full.
+				
+A pessimist will say it's half-empty.
+
+An engineer will tell you the glass is twice the size it needs to be.''
+
+\hfill --- Unknown Author
+\end{newepigraph}
+
+%% -----------------------------------------------
+% (7) TEXT BODY {{{1
+% -----------------------------------------------
+
+% Begin page number at one and start arabic page numbering
+\begintextbody
+
+\input{./chapters/introduction.tex}
+
+%% ----------------------------------------------
+% (8) BIBLIOGRAPHY {{{1
+% -----------------------------------------------
+\bibliography{refs}
+
+% -----------------------------------------------
+% (9) APPENDIXES {{{1
+% -----------------------------------------------
+
+\part*{Appendixes}
+\appendix
+
+\input{./appendixes/appendixA.tex}
+\input{./appendixes/appendixB.tex}
+
+\end{document}
