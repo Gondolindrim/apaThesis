@@ -16,7 +16,7 @@
 
 % :setfoldmethod=marker
 
-\documentclass[a4paper]{apaThesis}
+\documentclass{apaThesis}
 
 % -----------------------------------------------
 % (1) DOCUMENT DATA {{{1
@@ -35,18 +35,18 @@
   Department of Electrical and Computer Engineering}
 \advisor{Professor Dr. Luís Fernando Costa Alberto}
 \preamble{Template document developed for thesis documents fulfilling the guidelines of the Publication Manual of the American Psychology Association, Sixth Edition}
-
+%\renewcommand*\uniLogoWidth{0.2\textwidth}
 \begin{document}
-
-% -----------------------------------------------
-% (2) PRETEXTUAL ELEMENTS {{{1
-% -----------------------------------------------
 
 % PRINTING TITLE PAGE
 \printtitlepage
 
 % PRINTING FRONT MATTER
 \printfrontmatter
+
+% -----------------------------------------------
+% (2) SECOND FRONT MATTER {{{1
+% -----------------------------------------------
 
 % SECOND FRONT MATTER IN SECOND LANGUAGE
 % If this second frontmatter is not needed, comment lines 53-62.
@@ -62,6 +62,10 @@ Escola de Engenharia de São Carlos \par%
 Departamento de Engenharia Elétrica e de Computação}%
 {Professor Luís Fernando Costa Alberto}%
 {Documento padronizado (``template'') desenvolvido para uso em teses segundo o Manual de Publicações da Associação Americana de Psicologia, Sexta Edição.}
+
+% -----------------------------------------------
+% (3) CATALOGRAPHIC CARD {{{1
+% -----------------------------------------------
 
 % CATALOGRAPHIC CARD
 % I was not able to make a program for this as it can differ wildly between countries -- some won't even need one; therefore, unfortunately I was not able to make a macro or a custom command for this and it has to be edited manually. This is a widely used template, but please check if it fulfills the requirements of your institution and edit however needed.
@@ -96,7 +100,7 @@ Departamento de Engenharia Elétrica e de Computação}%
 \cleardoublepage
 
 % -----------------------------------------------
-% (3) ABSTRACTS {{{1
+% (4) ABSTRACTS {{{1
 % -----------------------------------------------
 %\pagestyle{plain}
 
@@ -115,7 +119,6 @@ Departamento de Engenharia Elétrica e de Computação}%
 \noindent
 \textbf{Keywords}: keyword 1, keyword 2, keyword 3 ...
 \end{newabstract}
-\newpage
 
 % (4.2) AUS DEUTSCH
 \begin{newabstract}{Zusammenfassung}
@@ -124,7 +127,6 @@ Zusammenfassung aus Deutsch. \\
 \noindent
 \textbf{Stichwörter}: Stichwort 1, Stichwort 2,...
 \end{newabstract}
-\newpage
 
 % (4.3) EM PORTUGUÊS
 \begin{newabstract}{Resumo}
@@ -134,7 +136,7 @@ Zusammenfassung aus Deutsch. \\
 \end{newabstract}
 
 % -----------------------------------------------
-% (4) LISTS OF FIGURES, TABLES, SYMBOLS AND ACRONYMS {{{1
+% (5) LISTS OF FIGURES, TABLES, SYMBOLS AND ACRONYMS {{{1
 % -----------------------------------------------
 % Figures and tables will be automatically added as they appear in text.
 
@@ -190,7 +192,7 @@ Zusammenfassung aus Deutsch. \\
 \endgroup
 
 % -----------------------------------------------
-% (5) TABLE OF CONTENTS {{{1
+% (6) TABLE OF CONTENTS {{{1
 % -----------------------------------------------
 
 \tableofcontents*
@@ -200,7 +202,7 @@ Zusammenfassung aus Deutsch. \\
 \pagestyle{fancy}
 
 % -----------------------------------------------
-% (6) EPIGRAPH {{{1
+% (7) EPIGRAPH {{{1
 % -----------------------------------------------
 
 \begin{newepigraph}
@@ -214,7 +216,7 @@ An engineer will tell you the glass is twice the size it needs to be.''
 \end{newepigraph}
 
 %% -----------------------------------------------
-% (7) TEXT BODY {{{1
+% (8) TEXT BODY {{{1
 % -----------------------------------------------
 
 % Begin page number at one and start arabic page numbering
@@ -222,13 +224,15 @@ An engineer will tell you the glass is twice the size it needs to be.''
 
 \input{./chapters/introduction.tex}
 
+\input{./chapters/figures_and_tables.tex}
+
 %% ----------------------------------------------
-% (8) BIBLIOGRAPHY {{{1
+% (9) BIBLIOGRAPHY {{{1
 % -----------------------------------------------
 \bibliography{refs}
 
 % -----------------------------------------------
-% (9) APPENDIXES {{{1
+% (10) APPENDIXES {{{1
 % -----------------------------------------------
 
 \part*{Appendixes}

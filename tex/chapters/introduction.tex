@@ -1,0 +1,252 @@
+% ---------------------------------------------------------
+\chapter{First steps: setting up your thesis}
+% ---------------------------------------------------------
+
+	\lettrine{T}{his} template is a joint effort between Álvaro Augusto Volpato --- graduate Electrical Engineering student from São Carlos School of Engineering (EESC) --- and Eduardo Graziozi Silva and Flavia Helena, from EESC's Library staff, to make an APA-style thesis template that abides to the formatting rules of the São Carlos School of Engineering at the University of São Paulo (EESC-USP). While Alvaro is the developer and maintainer, Eduardo and Flavia are the ones responsible for usage and distribution of the class throughout the University of São Paulo and specifically EESC. It is meant as a template for usage in thesis and dissertations written in English and Portuguese, although it can easily be translated to other languages and offers multi-language support.
+
+	This template was written using the guidelines of the Publication Manual of the American Association of Psychology, Sixth Edition, which can be obtained at \href{https://apastyle.apa.org/manual/}{APA's official page}. The template example together with its documentation and files can be obtained and downloaded at \href{http://github.com/Gondolindrim/apaThesis}{its repository}. There you can clone the repository, fork it, submit pull requests and so on. This documentation is meant to offer guidelines to use this template: read it carefully to understand and use it how the author intended.
+
+	To contact Álvaro for suggestions and feature requests, contact him at:
+
+\begin{itemize}
+	\item His e-mail \url{alvaro.volpato@usp.br};
+	\item His GitHub page: \url{http://github.com/Gondolindrim}.
+\end{itemize}
+
+	This first chapter will show the first steps in setting yout document in this template: how the template works and how it is organized, how to to change basic features of the template, like page size, margins, fonts, how to set title, author, university name, abstracts and epigraph.
+
+% ---------------------------------------------------------
+	\section{How the template is organized}%{{{1
+% ---------------------------------------------------------
+
+	The template folder tree is organized in three basic folders, at the root folder, as depicted in figure \ref{fig:rootFolderTree}.
+
+\begin{itemize}
+	\item The {\ttfamily\small /images} folder stores all graphics and image-related files. These are included in the document through a special commend {\ttfamily\small \\includegraphics};
+	\item The {\ttfamily\small /scripts} folder stores the codes, algorithms and listings that will be displayed in the thesis. These codes are displayed through a dedicated command {\ttfamily\small \\lstinputlisting}, which is used with a customized style defined in the class file;
+	\item The {\ttfamily\small /tex} folder stores all TeX-related files, including the thesis text, the class file, appendixes.
+\end{itemize}
+
+\begin{figure}
+\centering
+\framebox[\textwidth]{%
+\begin{minipage}{0.9\textwidth}
+	\dirtree{%
+	.1 /.
+	.2 \textbf{/images}.	
+	.2 \textbf{/scripts}.
+	.2 \textbf{/tex}.
+	}
+\end{minipage}
+}
+\caption{Root folder folder tree.}\label{fig:rootFolderTree}
+\end{figure}
+
+	These settings can be changed anytime and even throughout the document (see sections \ref{sec:figures} and \ref{sec:scripts}); they were adopted as default in order to facilitate organizing data. It is recommended that the user keeps the folder tree intact in order to coherently add graphics and scripts to the document.
+
+	The raw script of this template lies in the {\ttfamily\small tex} folder, as depicted in figure \ref{fig:texFolderTree}.
+
+\begin{figure}
+\centering
+\framebox[\textwidth]{%
+\begin{minipage}{0.9\textwidth}
+	\dirtree{%
+	.1 \textbf{/tex}.
+		.2 apaThesis.cls .
+		.2 main.tex .
+		.2 refs.bib .
+		.2 \textbf{/chapters} .
+			.3 introduction.tex .
+			.3 figs\_and\_tables.tex .
+			.3 equations\_and\_math.tex .
+			.3 references.tex .
+		.2 \textbf{/appendixes} .
+			.3 appendixA.tex .
+			.3 appendixB.tex .
+		.2 \textbf{/build} .
+			.3 main.pdf .
+			.3 Output files (*.toc, *.bbl, *.out et cetera) .
+	}
+\end{minipage}
+}
+\caption{{\ttfamily\small /tex} folder tree.}\label{fig:texFolderTree}
+\end{figure}
+
+	In the {\ttfamily\small /tex} folder tree,
+
+\begin{itemize}
+	\item {\ttfamily\small apaThesis.cls} is the TeX class file that stores the APA style guidelines and formats the document. It is invoked in the vey beggining of {\ttfamily\small main.tex}. It is recommended that this file is not edited nor moved/deleted unless needed;
+	\item {\ttfamily\small main.tex} is the main LaTeX file and describes the organization and contents of the document. This is where the pre-textual elements (title, front matter, catalographic card, abstracts, lists of figures, tables, acronyms and symbols, table of contents) are set-up, invoked and built;
+	\item {\ttfamily\small refs.bib} is the bibliography file, containing the references in BibTeX format;
+	\item {\ttfamily\small /tex/chapters} folder contains the text contents of the chapters, each chapter separated into a single *.tex file. This is done so as to make editing easier; otherwise, all text content is added to a single main.tex file which becomes too big and harder to maintain, specially when using versioning softwares like Git;
+	\item {\ttfamily\small /tex/appendixes} folder contains the appendixes text contents;
+	\item {\ttfamily\small /tex/build} folder contains the final build files, including the *.pdf file generated and other build files. It is recommended that the build folder be separated because those output files can flood the file tree and difficult maintenance.
+\end{itemize}
+
+% ---------------------------------------------------------
+	\section{Changing page geometry}%{{{1
+% ---------------------------------------------------------
+
+	The default implementation of the example uses the US Letter Paper size with 1 inch margins, as recommended by APA in their Publication Manual. This is done in the first lines of the {\ttfamily\small main.tex} file, by calling the class file with no options, as in listing \ref{lst:usLetter}.
+
+\begin{lstlisting}[caption = {Using the class with US Letter paper size}, label = {lst:usLetter}, style = prettyListing, language = tex]
+\documentclass{apaThesis}
+\end{lstlisting}
+
+	There is also an option for A4 paper, by invoking the {\ttfamily\small a4paper} option as in listing \ref{lst:a4paper}.
+
+\begin{lstlisting}[caption = {Using the class with A4 paper size}, label = {lst:a4paper}, style = prettyListing, language = tex]
+\documentclass[a4paper]{apaThesis}
+\end{lstlisting}
+
+	These two sizes should cover most universities requirements. If however a custom size needs to be used, you can declare a custom size in the first section of the class file, you can comment line 67 of the class file, uncomment line 70 and use the {\ttfamily\small paperwidth} and {\ttfamily\small paperheight} options, editing the height and width options as desired. You can also alter margin values if needed.
+
+% ---------------------------------------------------------
+	\section{Changing fonts used}%{{{1
+% ---------------------------------------------------------
+
+	The fonts definitions of the class lie in lines 81-90 of the class file, in the {\ttfamily\small (2) MAIN FONTS}. Any of the used fonts can be changed by the user; for a list of LaTeX supported fonts, see the \href{https://tug.org/FontCatalogue/}{\LaTeX\ font Catalogue}.
+
+\begin{itemize}
+	\item Font Rosario is used as the sans serif for titles and some highlights. This font is called by using the command {\ttfamily \textbackslash usepackage\{Rosario\}};
+	\item Font Times New Roman is used as serif font for most of the text body. This font is called by the {\ttfamily\small \textbackslash usepackage\{times\}}. Times font is also used as the main math font by using {\ttfamily\small \textbackslash usepackage\{newtxmath\}}
+	\item Font Inconsolata is used as the monospace font. This font is called by the {\ttfamily\small \textbackslash usepackage\{inconsolata\}}.
+	\item {\ttfamily\small \textbackslash usepackage\{lettrine\}} is used to display a big letter at the beggining of every chapter.
+\end{itemize}
+
+% ---------------------------------------------------------
+	\section{How to build the main.tex file}%{{{1
+% ---------------------------------------------------------
+
+	Two things must be noted when building the files: the first, that the build folder must be specified (otherwise the output files will be generated at the {\ttfamily\small /tex} folder, flooding it) and that the PDFLaTeX engine must be used (neither XeLaTex nor LuaLaTeX will work).
+
+	\subsection{In a command-line}
+
+	In Linux and Windows' command prompt, when using the shell script, building the main file is done by using the following command in the {\ttfamily\small /tex} folder:
+
+\begin{center} {\ttfamily\small pdflatex --output-directory=build main.tex} \end{center}
+
+	If you need to invoke PDFLaTeX from the root folder, use:
+
+\begin{center} {\ttfamily\small pdflatex --output-directory=./tex/build ./tex/main.tex} \end{center}
+
+	\subsection{In a dedicated TeX editor}
+
+	If an editor like TeXMaker, Lyx or TeXStudio is used, these parameters (using PDFLaTeX and the build directory) must be set expressly in the editor configurations. If Overleaf/ShareLaTeX is used, then this configuration is not needed as the platform generates output in real-time and the PDF file can be downloaded at any time.
+
+% ---------------------------------------------------------
+	\section{Setting up university logo, thesis title, front matter and abstracts}%{{{1
+% ---------------------------------------------------------
+
+	After setting up the basic geometry of the document, and before inputting the text body, you should input your name, thesis title, advisor name, university logo and name, and so on. This section will go through a step-by-step way to do this.
+
+	\subsection{Change basic metadata: title, names and university logo}
+
+	First, go to the first section of {\ttfamily\small main.tex} called {\ttfamily\small ``(1) DOCUMENT DATA''} and edit the data accordingly. Beware that the preamble text must generally follow a convention by your university or institute, so be sure to check past thesis and use the same format. Also be sure to correctly write the affiliation out; generally, the first line is the university name, second line is the institute name and third line is the department or research group name.
+
+	The university logo can be changed by simply replacing the {\ttfamily\small ./images/uniLogo.pdf} file with your university's or institute's logo. You might need to adjust this logo size by adjusting the {\ttfamily\small \textbackslash uniLogoWidth} command in line 38 of {\ttfamily\small main.pdf}. The default value is {\ttfamily\small 0.2\textbackslash textwidth}.
+
+% ---------------------------------------------------------
+	\subsection{Second front matter}%{{{2
+% ---------------------------------------------------------
+	
+	Many universities will require that after the english front matter, a second front matter is added in the native language of that institute or university. This is done by editing the parameters in lines 55-64 of {\ttfamily\small main.pdf}. If you don't need a second frontmatter, commend out these lines.
+
+% ---------------------------------------------------------
+	\subsection{Catalographic card}%{{{2
+% ---------------------------------------------------------
+
+	The catalographic card is a piece of meta data used by libraries to classify and organized their stored works. Generally they follow a very similar structure throughout the world.
+
+	As I was not able to automatize this card, it is needed that you edit it accordingly to the structure your university requires. The example pattern is used throughout the world and should be very common; all you need is to change the names accordingly.
+
+% ---------------------------------------------------------
+	\subsection{Abstracts}%{{{2
+% ---------------------------------------------------------
+
+	Adding an abstract is easily done through the {\ttfamily\small newabstract} environment. This environment is defined in the class file so that you can add as many abstracts as you wish, in as many languages.
+
+	To add a new abstract in english, use the following code:
+
+\begin{lstlisting}[caption = {Adding an abstract in english}, label = {lst:englishAbstract}, style = prettyListing, language = tex]
+\begin{newabstract}{Abstract}
+	This is the abstract in english. \\
+\noindent
+\textbf{Keywords}: keyword 1, keyword 2, keyword 3 ...
+\end{newabstract}
+\end{lstlisting}
+
+	To add an abstract in another language, use the other language names and abstract body; for example, to add an abstract in german, use:
+
+\begin{lstlisting}[caption = {Adding an abstract in german}, label = {lst:germanAbstract}, style = prettyListing, language = tex]
+\begin{newabstract}{Zusammenfassung}
+Zusammenfassung aus Deutsch. \\
+\noindent
+\textbf{Stichw\"{o}rter}: Stichwort 1, Stichwort 2,...
+\end{newabstract}
+\end{lstlisting}
+	
+	Beware that in most universities the english abstract will be needed, and an abstract in another language is optional. Either case, at least an abstract should be devised.
+
+	\subsubsection{Modifying abstract properties} %---------------------------------------------
+
+		The {\ttfamily\small newabstract} environment is defined in section {\ttfamily\small ``(13) NEWABSTRACT ENVIRONMENT''} of the class file. The default implementation is accepted widely and will most probably fit your university's requirements, but can be changed as desired.
+
+% ---------------------------------------------------------
+	\subsection{Acronyms and symbols}%{{{2
+% ---------------------------------------------------------
+
+	Next are the lists of acronyms and symbols. The example shows how to add acronyms:
+
+\begin{lstlisting}[caption = {Adding an acronym}, label = {lst:addingAcronym}, style = prettyListing, language = tex]
+	%\acronym{<acronym>}{<What the acroym means>}
+	\acronym{SG}{Synchronous Generator}
+\end{lstlisting}
+
+	The procedure is the same for symbols:
+
+\begin{lstlisting}[caption = {Adding an acronym}, label = {lst:addingAcronym}, style = prettyListing, language = tex]
+	%\item{<symbol>}{<What the symbol means>}
+	\item{$k_B$}{Boltzmann's constant}
+\end{lstlisting}
+
+	Also note that the {\ttfamily\small <symbol>} key can be a math expression, in between {\ttfamily\small \$} characters (the example document contains examples like this).
+
+	If acronyms and/or symbols are not needed, you can comment or delete the {\ttfamily\small acronyms} (lines 170-184 in the {\ttfamily\small main.tex} document) and {\ttfamily\small listofsymbols} (lines 186-193 in the {\ttfamily\small main.tex} document) environments.
+
+% ---------------------------------------------------------
+	\subsection{Epigraph}%{{{2
+% ---------------------------------------------------------
+
+	The epigraph is that little sentence or thought you add in italics, generally in latin, with the sole purpose of sounding smart.
+
+	To add an epigraph, use the {\ttfamily\small newepigraph} environment as used in line 211 of {\ttfamily\small main.tex}. If you don't want to sound smart, you can comment the environment (lines 211-219).
+
+% ---------------------------------------------------------
+	\subsection{First compile and adding packages}%{{{2
+% ---------------------------------------------------------
+
+	This is the end of the initial setting up steps. You should be able to compile your document now -- albeit with no text -- and see if it meets your requirements. The next chapter will focus on how to add text body.
+
+	In order to add your packages to the document, use the {\ttfamily\small \textbackslash usepackage[...]\{...\}} commands before the {\ttfamily\small \textbackslash begin\{document\}} command, ideally right below {\ttfamily\small \textbackslash documentclass\{apaThesis\}}.
+
+% ---------------------------------------------------------
+	\section{Adding text chapters and appendixes}%{{1
+% ---------------------------------------------------------
+
+	The text body can be added as a normal \LaTeX\ text.
+
+	The main example uses the {\ttfamily\small \textbackslash input} command, which allows you to input text from another file into your {\ttfamily\small main.pdf} file. This allows you to write each piece of text in a dedicated file, making maintenance easier. If a single {\ttfamily\small main.pdf} is used for the whole document, it can grow too big and make version management difficult, specially with Git, by generating conflicts between commits.
+
+	The figure, table and listing labels are kept throughout the whole document even if they are defined in different files; for example, say that in {\ttfamily\small chapter3.tex} you defined a figure with label {\ttfamily\small fig:graph}. You can call this same label in {\ttfamily\small chapter2.tex} just as if the chapters were written in the same file and not in separate files. For example, figure \ref{fig:ivCurve} is defined in the {\ttfamily\small /tex/appendixes/appendixA.tex} while this introduction chapter file is {\ttfamily\small /tex/chapters/introduction.tex} and the figure label can be used by typing {\ttfamily\small \textbackslash ref\{fig:ivCurve\}}, which is how its label is defined in the appendix file.
+
+	To add chapters and text body, use the syntax in listing \ref{lst:addingChapter}. Add that command after the {\ttfamily\small /begintextbody} command and between {\ttfamily\small \textbackslash bibliography}.
+
+\begin{lstlisting}[caption = {Adding a chapter to text body}, label = {lst:addingChapter}, style = prettyListing, language = tex]
+	%\input{<Chapter *.tex file>}
+	\input{./chapters/chapter1.tex}
+\end{lstlisting}
+
+	Note that the chapter files do not need headings or packages, as all configuration is inherited by them from {\texttt\small main.pdf}. By default in the template, chapter files are added to the {\ttfamily\small /tex/chapters} folder, but you can create further folders and add them to your {\ttfamily\small input} command.
+
+	This process is the same for adding appendixes; however, those should be added after the {\ttfamily\small \textbackslash appendix} command, since this command makes appendixes be numbered in progressive letters (Appendix A, Appendix B \textit{et cetera}).

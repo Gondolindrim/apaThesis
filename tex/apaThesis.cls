@@ -56,14 +56,18 @@
 % (0) PAGE GEOMETRY {{{1
 % -----------------------------------------------
 % The actual APA recommends usage of size US Letter Paper size 8.5''x11'' with 1'' margins. In this template, the a4 paper was used, but this can easily be changed by invoking the letterpaper argument in the class command:
-% \documentclass[letterpaper]{apaThesis}
-\DeclareOption{letterpaper}{\PassOptionsToPackage{letterpaper}{geometry}}
-\DeclareOption{a4paper}{\PassOptionsToPackage{a4paper}{geometry}}
-\ExecuteOptions{letterpaper,a4paper}
+\newcommand*\papersize{letterpaper}
 
-\ProcessOptions\relax
-\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\DeclareOption{a4paper}{
+	\renewcommand*\papersize{a4paper}
+}
 
+\ProcessOptions
+
+\usepackage[\papersize,top=1in,bottom=1in,left=1in,right=1in]{geometry}
+
+% Custom paper size
+% \usepackage[paperwith=9in,paperheight=10in,top=1in,bottom=1in,left=1in,right=1in]{geometry}
 % -----------------------------------------------
 % (1) INPUTENC AND FONTENC CODING {{{1
 % -----------------------------------------------
@@ -79,9 +83,7 @@
 \usepackage{newtxmath}		% Loads the Times-Roman Math Fonts
 \usepackage{inconsolata}
 
-%\usepackage{PTSans}
 \usepackage{Rosario}
-%\usepackage{sourcesanspro}
 
 \usepackage{lettrine}	% First capitalized letter at every chapter
 
@@ -126,9 +128,10 @@
 \usepackage{hyperref}
 \makeatletter
 \hypersetup{
-	colorlinks=false,       		% false: boxed links; true: colored links
-	pdfborder = {0 0 0},
-	linkbordercolor = {1 1 1}
+	%colorlinks=true,       		% false: boxed links; true: colored links
+	%pdfborder = {0 0 0},
+	linkbordercolor = {1 1 1},
+	urlcolor=blue
 }
 \makeatother
 
@@ -434,30 +437,30 @@
 
 \usepackage{listings}
 \usepackage{inconsolata}
-\lstdefinestyle{apaListing}{ % Define a style for your code snippet, multiple definitions can be made if, for example, you wish to insert multiple code snippets using different programming languages into one document
-%language=Python, % Detects keywords, comments, strings, functions, etc for the language specified
-backgroundcolor=\color{highlight}, % Set the background color for the snippet - useful for highlighting
-basicstyle=\tiny\ttfamily, % The default font size and style of the code
-breakatwhitespace=false, % If true, only allows line breaks at white space
-breaklines=true, % Automatic line breaking (prevents code from protruding outside the box)
-captionpos=t, % Sets the caption position: b for bottom; t for top
-commentstyle=\color{DarkGreen}\ttfamily, % Style of comments within the code - dark green courier font
-deletekeywords={}, % If you want to delete any keywords from the current language separate them by commas
-%escapeinside={\%}, % This allows you to escape to LaTeX using the character in the bracket
-firstnumber=1, % Line numbers begin at line 1
-frame=single, % Frame around the code box, value can be: none, leftline, topline, bottomline, lines, single, shadowbox
-frameround=tttt, % Rounds the corners of the frame for the top left, top right, bottom left and bottom right positions
-keywordstyle=\color{Blue}\bfseries\ttfamily, % Functions are bold and blue
-morekeywords={}, % Add any functions no included by default here separated by commas
-numbers=left, % Location of line numbers, can take the values of: none, left, right
-numbersep=10pt, % Distance of line numbers from the code box
-numberstyle=\tiny\color{Gray}, % Style used for line numbers
-rulecolor=\color{black}, % Frame border color
-showstringspaces=false, % Don't put marks in string spaces
-showtabs=false, % Display tabs in the code as lines
-stepnumber=5, % The step distance between line numbers, i.e. how often will lines be numbered
-stringstyle=\color{Purple}, % Strings are purple
-tabsize=2, % Number of spaces per tab in the code
+\lstdefinestyle{prettyListing}{ % Define a style for your code snippet, multiple definitions can be made if, for example, you wish to insert multiple code snippets using different programming languages into one document
+	%language=Python, % Detects keywords, comments, strings, functions, etc for the language specified
+	backgroundcolor=\color{highlight}, % Set the background color for the snippet - useful for highlighting
+	basicstyle=\footnotesize\ttfamily, % The default font size and style of the code
+	breakatwhitespace=false, % If true, only allows line breaks at white space
+	breaklines=true, % Automatic line breaking (prevents code from protruding outside the box)
+	captionpos=t, % Sets the caption position: b for bottom; t for top
+	commentstyle=\color{DarkGreen}\ttfamily, % Style of comments within the code - dark green courier font
+	deletekeywords={}, % If you want to delete any keywords from the current language separate them by commas
+	%escapeinside={\%}, % This allows you to escape to LaTeX using the character in the bracket
+	firstnumber=1, % Line numbers begin at line 1
+	frame=single, % Frame around the code box, value can be: none, leftline, topline, bottomline, lines, single, shadowbox
+	frameround=tttt, % Rounds the corners of the frame for the top left, top right, bottom left and bottom right positions
+	keywordstyle=\color{Blue}\bfseries\ttfamily, % Functions are bold and blue
+	morekeywords={}, % Add any functions no included by default here separated by commas
+	numbers=left, % Location of line numbers, can take the values of: none, left, right
+	numbersep=10pt, % Distance of line numbers from the code box
+	numberstyle=\tiny\color{Gray}, % Style used for line numbers
+	rulecolor=\color{black}, % Frame border color
+	showstringspaces=false, % Don't put marks in string spaces
+	showtabs=false, % Display tabs in the code as lines
+	stepnumber=5, % The step distance between line numbers, i.e. how often will lines be numbered
+	stringstyle=\color{Purple}, % Strings are purple
+	tabsize=2, % Number of spaces per tab in the code
 }
 
 % -----------------------------------------------
@@ -477,13 +480,13 @@ tabsize=2, % Number of spaces per tab in the code
 % -----------------------------------------------
 % (14) TITLE PAGE {{{1
 % -----------------------------------------------
-
+\newcommand*\uniLogoWidth{0.2\textwidth}
 \newcommand{\printtitlepage}{
 	\begin{titlingpage}
 
 	%	\vspace*{1cm}
 
-		\center\includegraphics[width=0.2\textwidth]{../images/uniLogo.pdf}
+		\center\includegraphics[width=\uniLogoWidth]{../images/uniLogo.pdf}
 		\vfill
 		
 		\begin{minipage}{0.75\textwidth}
@@ -586,27 +589,26 @@ tabsize=2, % Number of spaces per tab in the code
 % Place
 \newcommand{\theplace}{}
 \newcommand{\place}[1]{\renewcommand{\theplace}{#1}}
-\place{São Carlos, Brazil}
+\place{Gondolin, Beleriand }
 
 % Writingdate
 \newcommand{\thewritingdate}{}
 \newcommand{\writingdate}[1]{\renewcommand{\thewritingdate}{#1}}
-\writingdate{May 2019}
+\writingdate{May, FA 510}
 
 % Affiliation
 \newcommand{\theaffiliation}{}
 \newcommand{\affiliation}[1]{\renewcommand{\theaffiliation}{#1}}
 \affiliation{%
-  Universidade de São Paulo
-  \par
-  São Carlos School of Engineering
-  \par
-  Department of Electrical and Computer Engineering}
-
+	Gondolin Technical Institute
+	\par
+	Guild of the Forgers
+	\par
+	Department of Elven Steel Forgers}
 % Advisor
 \newcommand{\theadvisor}{}
 \newcommand{\advisor}[1]{\renewcommand{\theadvisor}{#1}}
-\advisor{Associate Professor Dr. Luís Fernando Costa Alberto}
+\advisor{Full Professor Targon the Wise}
 
 % Preamble
 \newcommand{\thepreamble}{}
