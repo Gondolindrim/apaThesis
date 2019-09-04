@@ -36,6 +36,7 @@
 \advisor{Professor Dr. Luís Fernando Costa Alberto}
 \preamble{Template document developed for thesis documents fulfilling the guidelines of the Publication Manual of the American Psychology Association, Sixth Edition}
 %\renewcommand*\uniLogoWidth{0.2\textwidth}
+
 \begin{document}
 
 % PRINTING TITLE PAGE
@@ -222,9 +223,8 @@ An engineer will tell you the glass is twice the size it needs to be.''
 % Begin page number at one and start arabic page numbering
 \begintextbody
 
-\input{./chapters/introduction.tex}
-
-\input{./chapters/figures_and_tables.tex}
+\addchapter{introduction.tex}
+\addchapter{figures_and_tables.tex}
 
 %% ----------------------------------------------
 % (9) BIBLIOGRAPHY {{{1
@@ -238,7 +238,7 @@ An engineer will tell you the glass is twice the size it needs to be.''
 \part*{Appendixes}
 \appendix
 
-\input{./appendixes/appendixA.tex}
-\input{./appendixes/appendixB.tex}
+\addappendix{appendixA.tex}
+\addappendix{appendixB.tex}
 
 \end{document}

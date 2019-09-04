@@ -646,3 +646,15 @@
 % (19) dirtree package for folder trees {{{1
 % -----------------------------------------------
 \usepackage{dirtree}
+
+% -----------------------------------------------
+% (20) SETTING UP CHAPTER AND APPENDIX FILE PATHS
+% -----------------------------------------------
+
+\def\thechapterpath{./chapters}
+\def\theappendixpath{./appendixes}
+\graphicspath{../images}
+\newcommand{\chapterpath}{1}{\def\thechapterpath{#1}}
+\newcommand{\appendixpath}{1}{\def\theappendixpath{#1}}
+\newcommand{\addchapter}[1]{\input{\chapterpath/#1}}
+\newcommand{\addappendix}[1]{\input{\appendixpath/#1}}
