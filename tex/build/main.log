@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.13)  4 SEP 2019 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.13)  4 SEP 2019 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1536,7 +1536,7 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
-)
+
 (/usr/share/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
@@ -1558,63 +1558,67 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@baselineskip=\dimen333
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
-)
+))
 
 LaTeX Warning: Unused global option(s):
     [english,brazil].
 
-(build/main.aux)
+(build/main.aux
+
+LaTeX Warning: Label `lst:addingAcronym' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 45.
-LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 45
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 46.
+LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 46
 .
  (/usr/share/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 46.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 45
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 46
 .
 
 (/usr/share/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 46.
 LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 4
-5.
+6.
 
 (/usr/share/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 46.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1658,7 +1662,7 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 45.
+LaTeX Info: Redefining \selectfont on input line 46.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1690,10 +1694,10 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \[ on input line 45.
-LaTeX Info: Redefining \] on input line 45.
+LaTeX Info: Redefining \[ on input line 46.
+LaTeX Info: Redefining \] on input line 46.
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 45.
+Package hyperref Info: Link coloring OFF on input line 46.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1705,10 +1709,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 45.
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
 (build/main.out) (build/main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1717,17 +1721,17 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count376
-<../images/uniLogo.pdf, id=29, 2102.85625pt x 2218.2875pt>
+<../images/uniLogo.pdf, id=140, 2102.85625pt x 2218.2875pt>
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
-Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 48.
+Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 49.
 (pdftex.def)             Requested size: 93.94957pt x 99.07396pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Try loading font information for T1+Rosario-LF on input lin
-e 48.
+e 49.
 
 (/usr/share/texmf-dist/tex/latex/rosario/T1Rosario-LF.fd
 File: T1Rosario-LF.fd 2016/05/01 (autoinst) Font definitions for T1/Rosario-LF.
@@ -1735,91 +1739,91 @@ File: T1Rosario-LF.fd 2016/05/01 (autoinst) Font definitions for T1/Rosario-LF.
 )
 LaTeX Font Info:    Font shape `T1/Rosario-LF/bx/n' in size <12> not available
 (Font)              Font shape `T1/Rosario-LF/b/n' tried instead on input line 
-48.
+49.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 48.
+(Font)              scaled to size 12.0pt on input line 49.
 LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 4
-8.
+9.
 
 (/usr/share/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 48.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 49.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 48.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 49.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 48.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 49.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/Rosario-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 48.
+(Font)              scaled to size 12.0pt on input line 49.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/uniLogo.pdf>] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/Rosario-LF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 51.
+(Font)              scaled to size 10.95pt on input line 52.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/bx/n' in size <10.95> not availab
 le
 (Font)              Font shape `T1/Rosario-LF/b/n' tried instead on input line 
-51.
+52.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 51.
+(Font)              scaled to size 10.95pt on input line 52.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 \printfrontmatter
+l.52 \printfrontmatter
                        [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 \printfrontmatter
+l.52 \printfrontmatter
                        [2
 
 ] [3] [4
 
 ]
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 103.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 104.
 
 (/usr/share/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 103.
+(Font)              scaled to size 10.95pt on input line 104.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 103.
+(Font)              scaled to size 9.0pt on input line 104.
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
 
  []
 
@@ -1827,13 +1831,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--103
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 123.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 124.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 126.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
  [7] [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
@@ -1843,13 +1847,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
 ]
 LaTeX Font Info:    Font shape `T1/Rosario-LF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 151.
+(Font)              scaled to size 24.88pt on input line 152.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/bx/n' in size <24.88> not availab
 le
 (Font)              Font shape `T1/Rosario-LF/b/n' tried instead on input line 
-151.
+152.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 151.
+(Font)              scaled to size 24.88pt on input line 152.
  (build/main.lof
 LaTeX Font Info:    Font shape `T1/Rosario-LF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 2.
@@ -1916,32 +1920,20 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 12.
 (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-
-LaTeX Warning: Reference `fig:rootFolderTree' on page 25 undefined on input lin
-e 22.
-
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.0pt on input line 25.
 LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/zi4/b/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
 (Font)              scaled to size 10.95pt on input line 41.
-[25]
+ [25]
 
 LaTeX Warning: Reference `sec:figures' on page 26 undefined on input line 45.
 
 
 LaTeX Warning: Reference `sec:scripts' on page 26 undefined on input line 45.
 
-
-LaTeX Warning: Reference `fig:texFolderTree' on page 26 undefined on input line
- 47.
-
-[26]
-
-LaTeX Warning: Reference `lst:usLetter' on page 27 undefined on input line 90.
-
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[26] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -1973,10 +1965,6 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 92.
-
-
-LaTeX Warning: Reference `lst:a4paper' on page 27 undefined on input line 96.
-
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 123.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/bx/it' in size <10.95> not availa
@@ -1985,7 +1973,7 @@ ble
  123.
 LaTeX Font Info:    Font shape `T1/Rosario-LF/b/it' will be
 (Font)              scaled to size 10.95pt on input line 123.
-[27]
+ [27]
 LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <9> not available
 (Font)              Font shape `T1/zi4/b/n' tried instead on input line 174.
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
@@ -1993,138 +1981,47 @@ LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
  [28]
 LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 210.
 
- (/usr/share/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+
+(/usr/share/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
 (Font)              scaled to size 9.0pt on input line 210.
- [29]
-
-LaTeX Warning: Reference `fig:ivCurve' on page 30 undefined on input line 241.
-
-
-LaTeX Warning: Reference `lst:addingChapter' on page 30 undefined on input line
- 243.
-
-
-LaTeX Warning: Reference `lst:addingAppendix' on page 30 undefined on input lin
-e 252.
-
-) (./chapters/figures_and_tables.tex [30]
-
-LaTeX Warning: Reference `lst:addingFigure' on page 31 undefined on input line 
-15.
-
-
-LaTeX Warning: Reference `lst:5cmEESC' on page 31 undefined on input line 28.
-
-
-LaTeX Warning: Reference `fig:5cmEESC' on page 31 undefined on input line 28.
-
-
-LaTeX Warning: Reference `fig:5cmEESC' on page 31 undefined on input line 30.
-
-
-LaTeX Warning: Reference `fig:5cmEESC' on page 31 undefined on input line 30.
-
+ [29])
+(./chapters/figures_and_tables.tex [30]
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
 Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 41.
 (pdftex.def)             Requested size: 142.26378pt x 150.0495pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [31
 
 ]
-
-LaTeX Warning: Reference `lst:5cmEESC' on page 32 undefined on input line 63.
-
-
-LaTeX Warning: Reference `lst:53cmEESC' on page 32 undefined on input line 63.
-
-
-LaTeX Warning: Reference `fig:53cmEESC' on page 32 undefined on input line 63.
-
-
-LaTeX Warning: Reference `fig:53cmEESC' on page 32 undefined on input line 65.
-
-
-LaTeX Warning: Reference `fig:53cmEESC' on page 32 undefined on input line 65.
-
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
 Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 76.
 (pdftex.def)             Requested size: 142.2415pt x 85.33156pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `lst:quarterTextEESC' on page 32 undefined on input li
-ne 81.
-
-
-LaTeX Warning: Reference `fig:quarterTextEESC' on page 32 undefined on input li
-ne 81.
-
 [32]
-
-LaTeX Warning: Reference `fig:quarterTextEESC' on page 33 undefined on input li
-ne 83.
-
-
-LaTeX Warning: Reference `fig:quarterTextEESC' on page 33 undefined on input li
-ne 83.
-
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
 Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 94.
 (pdftex.def)             Requested size: 117.43875pt x 123.88477pt.
-
-LaTeX Warning: Reference `lst:45degreeEESC' on page 33 undefined on input line 
-103.
-
-
-LaTeX Warning: Reference `fig:45degreeEESC' on page 33 undefined on input line 
-103.
-
-
-LaTeX Warning: Reference `fig:45degreeEESC' on page 33 undefined on input line 
-105.
-
-
-LaTeX Warning: Reference `fig:45degreeEESC' on page 33 undefined on input line 
-105.
-
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
 Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 116.
 (pdftex.def)             Requested size: 85.35826pt x 90.03647pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `lst:basicTable' on page 33 undefined on input line 12
-5.
-
-[33]
-
-LaTeX Warning: Reference `tab:exampleTable' on page 34 undefined on input line 
-156.
-
-
-LaTeX Warning: Reference `tab:exampleTable' on page 34 undefined on input line 
-160.
-
-[34]
-
-LaTeX Warning: Reference `tab:exampleTable' on page 35 undefined on input line 
-164.
-
-
-LaTeX Warning: Reference `tab:exampleTable' on page 35 undefined on input line 
-164.
-
+[33] [34]
 
 LaTeX Font Warning: Font shape `T1/Rosario-LF/m/sc' undefined
 (Font)              using `T1/Rosario-LF/m/n' instead on input line 192.
@@ -2143,14 +2040,10 @@ LaTeX Warning: Reference `eq:PVPanelModelModified' on page 41 undefined on inpu
 t line 3.
 
 
-LaTeX Warning: Reference `lst:pvPanelCurves' on page 41 undefined on input line
- 3.
-
-
 LaTeX Warning: Reference `tab:panelParameters' on page 41 undefined on input li
 ne 3.
 
-<../images/pvPanelCurves/ivCurve.pdf, id=402, 1028.7472pt x 684.49985pt>
+<../images/pvPanelCurves/ivCurve.pdf, id=518, 1028.7472pt x 684.49985pt>
 File: ../images/pvPanelCurves/ivCurve.pdf Graphic file (type pdf)
 <use ../images/pvPanelCurves/ivCurve.pdf>
 Package pdftex.def Info: ../images/pvPanelCurves/ivCurve.pdf  used on input lin
@@ -2166,14 +2059,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 
-LaTeX Warning: Reference `fig:ivCurve' on page 41 undefined on input line 12.
-
-
 LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 41 undefined o
 n input line 12.
-
-
-LaTeX Warning: Reference `fig:ivCurve' on page 41 undefined on input line 12.
 
 
 LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 41 undefined o
@@ -2228,14 +2115,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29707 strings out of 492623
- 478109 string characters out of 6135669
- 1069265 words of memory out of 5000000
- 32581 multiletter control sequences out of 15000+600000
+ 29737 strings out of 492623
+ 478563 string characters out of 6135669
+ 1072266 words of memory out of 5000000
+ 32611 multiletter control sequences out of 15000+600000
  652250 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,124p,906b,2273s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2254,10 +2141,10 @@ hare/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texmf-dist/fon
 ts/type1/public/newtx/txsys.pfb></usr/share/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on build/main.pdf (53 pages, 311140 bytes).
+Output written on build/main.pdf (53 pages, 313825 bytes).
 PDF statistics:
- 1132 PDF objects out of 1200 (max. 8388607)
- 1020 compressed objects within 11 object streams
+ 1250 PDF objects out of 1440 (max. 8388607)
+ 1131 compressed objects within 12 object streams
  595 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

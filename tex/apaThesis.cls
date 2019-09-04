@@ -50,6 +50,7 @@
 % (17) Epigraph - the nice sounding latin statement you put there to sound smart
 % (18) pcite command
 % (19) dirtree package
+% (20) Setting up chapter and appendixes *.tex files path
 % -------------------------------------------------
 
 % -----------------------------------------------
@@ -648,13 +649,13 @@
 \usepackage{dirtree}
 
 % -----------------------------------------------
-% (20) SETTING UP CHAPTER AND APPENDIX FILE PATHS
+% (20) SETTING UP CHAPTER AND APPENDIX FILE PATHS {{{1
 % -----------------------------------------------
 
 \def\thechapterpath{./chapters}
 \def\theappendixpath{./appendixes}
-\graphicspath{../images}
-\newcommand{\chapterpath}{1}{\def\thechapterpath{#1}}
-\newcommand{\appendixpath}{1}{\def\theappendixpath{#1}}
-\newcommand{\addchapter}[1]{\input{\chapterpath/#1}}
-\newcommand{\addappendix}[1]{\input{\appendixpath/#1}}
+\graphicspath{ {../images/} }
+\newcommand{\chapterpath}[1]{\def\thechapterpath{#1}}
+\newcommand{\appendixpath}[1]{\def\theappendixpath{#1}}
+\newcommand{\addchapter}[1]{\input{\thechapterpath/#1}}
+\newcommand{\addappendix}[1]{\input{\theappendixpath/#1}}
