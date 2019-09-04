@@ -24,7 +24,12 @@
 \BOOKMARK [1][-]{section.1.6}{Adding text chapters and appendixes}{chapter.1}% 24
 \BOOKMARK [0][-]{chapter.2}{Figures and tables}{}% 25
 \BOOKMARK [1][-]{section.2.1}{Adding figures}{chapter.2}% 26
-\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 27
-\BOOKMARK [-1][-]{chapter*.9}{Appendixes}{}% 28
-\BOOKMARK [0][-]{appendix.A}{PV Panel Curves and simulation program}{chapter*.9}% 29
-\BOOKMARK [0][-]{appendix.B}{Second appendix}{chapter*.9}% 30
+\BOOKMARK [2][-]{subsection.2.1.1}{Figure placement}{section.2.1}% 27
+\BOOKMARK [2][-]{subsection.2.1.2}{Scaling figures}{section.2.1}% 28
+\BOOKMARK [2][-]{subsection.2.1.3}{Rotating figures}{section.2.1}% 29
+\BOOKMARK [1][-]{section.2.2}{Adding tables}{chapter.2}% 30
+\BOOKMARK [2][-]{subsection.2.2.1}{Coding your table}{section.2.2}% 31
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 32
+\BOOKMARK [-1][-]{chapter*.12}{Appendixes}{}% 33
+\BOOKMARK [0][-]{appendix.A}{PV Panel Curves and simulation program}{chapter*.12}% 34
+\BOOKMARK [0][-]{appendix.B}{Second appendix}{chapter*.12}% 35

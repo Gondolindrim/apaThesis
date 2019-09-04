@@ -59,7 +59,7 @@
 			.3 introduction.tex .
 			.3 figs\_and\_tables.tex .
 			.3 equations\_and\_math.tex .
-			.3 references.tex .
+			.3 bibliography.tex .
 		.2 \textbf{/appendixes} .
 			.3 appendixA.tex .
 			.3 appendixB.tex .
@@ -231,7 +231,7 @@ Zusammenfassung aus Deutsch. \\
 	In order to add your packages to the document, use the {\ttfamily\small \textbackslash usepackage[...]\{...\}} commands before the {\ttfamily\small \textbackslash begin\{document\}} command, ideally right below {\ttfamily\small \textbackslash documentclass\{apaThesis\}}.
 
 % ---------------------------------------------------------
-	\section{Adding text chapters and appendixes}%{{1
+	\section{Adding text chapters and appendixes}%{{{1
 % ---------------------------------------------------------
 
 	The text body can be added as a normal \LaTeX\ text.
@@ -243,10 +243,19 @@ Zusammenfassung aus Deutsch. \\
 	To add chapters and text body, use the syntax in listing \ref{lst:addingChapter}. Add that command after the {\ttfamily\small /begintextbody} command and between {\ttfamily\small \textbackslash bibliography}.
 
 \begin{lstlisting}[caption = {Adding a chapter to text body}, label = {lst:addingChapter}, style = prettyListing, language = tex]
-	%\input{<Chapter *.tex file>}
-	\input{./chapters/chapter1.tex}
+%\input{<Chapter *.tex file>}
+\input{./chapters/chapter1.tex}
 \end{lstlisting}
 
 	Note that the chapter files do not need headings or packages, as all configuration is inherited by them from {\texttt\small main.pdf}. By default in the template, chapter files are added to the {\ttfamily\small /tex/chapters} folder, but you can create further folders and add them to your {\ttfamily\small input} command.
 
-	This process is the same for adding appendixes; however, those should be added after the {\ttfamily\small \textbackslash appendix} command, since this command makes appendixes be numbered in progressive letters (Appendix A, Appendix B \textit{et cetera}).
+	This process is the same for adding appendixes; however, those should be added after the {\ttfamily\small \textbackslash appendix} command, since this command makes appendixes be numbered in progressive letters (Appendix A, Appendix B \textit{et cetera}). See listing \ref{lst:addingAppendix} for details.
+
+\begin{lstlisting}[caption = {Adding an appendix to text body}, label = {lst:addingAppendix}, style = prettyListing, language = tex]
+\part*{Appendixes}
+\appendix
+
+%\input{<Appendix *.tex file>}
+\input{./appendixes/appendixA.tex}
+\input{./appendixes/appendixB.tex}
+\end{lstlisting}

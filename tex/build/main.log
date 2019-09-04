@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.13)  30 AUG 2019 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.23)  2 SEP 2019 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1721,7 +1721,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count376
-<../images/uniLogo.pdf, id=120, 2102.85625pt x 2218.2875pt>
+<../images/uniLogo.pdf, id=140, 2102.85625pt x 2218.2875pt>
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
 Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 42.
@@ -1899,10 +1899,7 @@ LaTeX Font Info:    Font shape `T1/Rosario-LF/b/it' will be
 LaTeX Font Info:    Font shape `T1/Rosario-LF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 13.
 
-Underfull \vbox (badness 3240) has occurred while \output is active []
-
- [21])
-[22] [23
+[21]) [22] [23
 
 ] (./chapters/introduction.tex [24
 
@@ -1994,33 +1991,59 @@ LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
 (./chapters/figures_and_tables.tex [30]
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
-Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 45.
+Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 41.
 (pdftex.def)             Requested size: 142.26378pt x 150.0495pt.
- [31
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31
 
 ]
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
-Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 63.
+Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 76.
+(pdftex.def)             Requested size: 142.2415pt x 85.33156pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[32]
+File: ../images/uniLogo.pdf Graphic file (type pdf)
+<use ../images/uniLogo.pdf>
+Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 94.
 (pdftex.def)             Requested size: 117.43875pt x 123.88477pt.
-) (build/main.bbl [32]
+File: ../images/uniLogo.pdf Graphic file (type pdf)
+<use ../images/uniLogo.pdf>
+Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 116.
+(pdftex.def)             Requested size: 85.35826pt x 90.03647pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33] [34]
+
+LaTeX Font Warning: Font shape `T1/Rosario-LF/m/sc' undefined
+(Font)              using `T1/Rosario-LF/m/n' instead on input line 192.
+
+) (build/main.bbl [35] [36
+
+]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [33
+) [37] [38
 
-] [34
+] [39] [40] (./appendixes/appendixA.tex
 
-] [35] [36] (./appendixes/appendixA.tex
-
-LaTeX Warning: Reference `eq:PVPanelModelModified' on page 37 undefined on inpu
+LaTeX Warning: Reference `eq:PVPanelModelModified' on page 41 undefined on inpu
 t line 3.
 
 
-LaTeX Warning: Reference `tab:panelParameters' on page 37 undefined on input li
+LaTeX Warning: Reference `tab:panelParameters' on page 41 undefined on input li
 ne 3.
 
-<../images/pvPanelCurves/ivCurve.pdf, id=401, 1028.7472pt x 684.49985pt>
+<../images/pvPanelCurves/ivCurve.pdf, id=518, 1028.7472pt x 684.49985pt>
 File: ../images/pvPanelCurves/ivCurve.pdf Graphic file (type pdf)
 <use ../images/pvPanelCurves/ivCurve.pdf>
 Package pdftex.def Info: ../images/pvPanelCurves/ivCurve.pdf  used on input lin
@@ -2036,43 +2059,38 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 
-LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 37 undefined o
+LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 41 undefined o
 n input line 12.
 
 
-LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 37 undefined o
+LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 41 undefined o
 n input line 12.
 
-(../images/pvPanelCurves/mppTracking.py [37
+(../images/pvPanelCurves/mppTracking.py [41
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]))
-(./appendixes/appendixB.tex [44] [45 <../images/pvPanelCurves/ivCurve.pdf>]
-[46
+ [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-])
+ [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package caption Warning: Unused \captionsetup[table] on input line 415.
-See the caption package documentation for explanation.
+ [45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[47]
+ [46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]))
+(./appendixes/appendixB.tex [48] [49 <../images/pvPanelCurves/ivCurve.pdf>]
+[50
+
+]) [51]
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -2101,10 +2119,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29577 strings out of 492623
- 476438 string characters out of 6135669
- 1071331 words of memory out of 5000000
- 32513 multiletter control sequences out of 15000+600000
+ 29731 strings out of 492623
+ 478490 string characters out of 6135669
+ 1072226 words of memory out of 5000000
+ 32605 multiletter control sequences out of 15000+600000
  652250 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,124p,906b,2273s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2123,10 +2141,10 @@ hare/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texmf-dist/fon
 ts/type1/public/newtx/txsys.pfb></usr/share/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on build/main.pdf (49 pages, 299615 bytes).
+Output written on build/main.pdf (53 pages, 313846 bytes).
 PDF statistics:
- 1120 PDF objects out of 1200 (max. 8388607)
- 1011 compressed objects within 11 object streams
- 533 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1250 PDF objects out of 1440 (max. 8388607)
+ 1131 compressed objects within 12 object streams
+ 595 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

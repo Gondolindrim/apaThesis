@@ -49,7 +49,7 @@
 % (16) Document data - author, title, place, date, advisor
 % (17) Epigraph - the nice sounding latin statement you put there to sound smart
 % (18) pcite command
-% (19) dirtree command
+% (19) dirtree package
 % -------------------------------------------------
 
 % -----------------------------------------------

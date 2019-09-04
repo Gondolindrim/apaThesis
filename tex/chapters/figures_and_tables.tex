@@ -14,24 +14,20 @@
 
 	To add a figure to the document, use syntax in listing \ref{lst:addingFigure}.
 
-\begin{lstlisting}[caption = {Adding a figure}, label = {lst:addingFigure}, style = prettyListing, language = tex]
+\begin{lstlisting}[caption = {Basic code for adding a figure.}, label = {lst:addingFigure}, style = prettyListing, language = tex]
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = <desired width>]{<Figure file location>}
+	\includegraphics[<Scaling and angle options>]{<Figure file location>}
 	\caption{<Figure caption>}
 	\label{<Human-readable label>}
 \end{figure}
 \end{lstlisting}
 
-	This procedure is highly customizable, according to the parameters of the various environments and commands used.
-
-	 The {\ttfamily\small figure} environment makes a floating figure that is adjusted by the \LaTeX\ engine . The {\ttfamily\small [h]} option defines that the figure should be placed preferably where it is placed in the source text, but that does not mean it will necessarily be placed there. For more placing options, see \href{https://tex.stackexchange.com/questions/35125/how-to-use-the-placement-options-t-h-with-figures}{this StackExchange page}.
-
 	{\ttfamily\small \textbackslash centering } forces figure centering; {\ttfamily\small \textbackslash caption\{\} } is the figure caption that explains or defines it; {\ttfamily\small \textbackslash label\{\} } is the human-readable label that you use to reference the image in the text.
 
 	The command {\ttfamily\small \textbackslash includegraphics[]\{\} } is the command to insert the figure. This command defines the size of the inserted image; for example, using {\ttfamily\small \textbackslash width = 5cm} will add a five-centimeter-wide figure that is also vertically scaled. See listing \ref{lst:5cmEESC}; figure \ref{fig:5cmEESC} shows the output of that code.
 
-\begin{lstlisting}[caption = {5cm-wide EESC logo}, label = {lst:5cmEESC}, style = prettyListing, language = tex]
+\begin{lstlisting}[caption = {5cm-wide EESC logo (figure \ref{fig:5cmEESC}).}, label = {lst:5cmEESC}, style = prettyListing, language = tex]
 \begin{figure}[h]
 	\centering
 	\includegraphics[width = 5cm]{../images/uniLogo.pdf}
@@ -47,9 +43,44 @@
 	\label{fig:5cmEESC}
 \end{figure}
 
-	To make it easier for you to scale graphics in relation to the text column width, this length is given in \LaTeX\ by the command {\ttfamily\small \textbackslash textwidth}; for instance, to insert an image that has width of a quarter the text width, use {\ttfamily\small width = 0.25\textbackslash textwidth}, as in listing \ref{lst:quarterTextEESC}. Figure \ref{fig:quarterTextEESC} shows the output of such code.
+	This procedure is highly customizable, according to the parameters of the various environments and commands used.
 
-\begin{lstlisting}[caption = {EESC logo with quarter the text column width}, label = {lst:quarterTextEESC}, style = prettyListing, language = tex]
+	\subsection{Figure placement}
+
+	 The {\ttfamily\small figure} environment makes a floating figure that is adjusted by the \LaTeX\ engine . The {\ttfamily\small [h]} option defines that the figure should be placed preferably where it is placed in the source text, but that does not mean it will necessarily be placed there. For more placing options, see \href{https://tex.stackexchange.com/questions/35125/how-to-use-the-placement-options-t-h-with-figures}{this StackExchange page}. There are also other options, like:
+
+\begin{itemize}
+	\item The {\ttfamily\small [t]} option will position the figure at the top of the page;
+	\item The {\ttfamily\small [b]} option will position the figure at the bottom of the page;
+	\item The {\ttfamily\small [p]} option will position the figure at a special page reserved for floating environments only;
+	\item The {\ttfamily\small [H]} option forces the engine to place the figure at \textit{exactly} the location it was defined in the source file.
+\end{itemize}
+
+% ----------------------------------------------
+	\subsection{Scaling figures}
+% ----------------------------------------------
+
+	The  {\ttfamily\small \textbackslash includegraphics} command has a variety of options, like {\ttfamily\small width} and {\ttfamily\small height}, used too adjust the width and height of the image; if only one is used, the image is scaled to that dimension. For example, in listing \ref{lst:5cmEESC} only the width option was used, so the image height was scaled so that the width would be the specified value. If, however, both height and width values are specified, the image will be adjusted for the given values. Listing \ref{lst:53cmEESC} shows an example of both values given and image \ref{fig:53cmEESC} shows the result. Note that the image looks flattened because the height and width values given are not proportional to the original proportions of the image.
+
+\begin{lstlisting}[caption = {5cm-wide EESC logo (figure \ref{fig:53cmEESC}}), label = {lst:53cmEESC}, style = prettyListing, language = tex]
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 5cm, height = 3cm]{../images/uniLogo.pdf}
+	\caption{Five centimeter wide, three centimeter tall EESC logo}
+	\label{fig:53cmEESC}
+\end{figure}
+\end{lstlisting}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 5cm, height = 3cm]{../images/uniLogo.pdf}
+	\caption{Five centimeter wide, three centimeter tall EESC logo}
+	\label{fig:53cmEESC}
+\end{figure}
+
+	To make it easier for you to scale graphics in relation to the text column width, this length is given in \LaTeX\ by the command {\ttfamily\small \textbackslash textwidth}; for instance, to insert an image that has width of a quarter the text width, use {\ttfamily\small width = 0.25\textbackslash textwidth}, as in listing \ref{lst:quarterTextEESC}. Figure \ref{fig:quarterTextEESC} shows the output of such code. Giving height and width values in fractions of the text column width guarantees that the image will look more organic and better placed.
+
+\begin{lstlisting}[caption = {EESC logo with quarter the text column width (figure \ref{fig:quarterTextEESC}}), label = {lst:quarterTextEESC}, style = prettyListing, language = tex]
 \begin{figure}[h]
 	\centering
 	\includegraphics[width = 0.25\textwidth]{../images/uniLogo.pdf}
@@ -64,3 +95,103 @@
 	\caption{EESC logo with a quarter the text column width.}
 	\label{fig:quarterTextEESC}
 \end{figure}
+
+% ----------------------------------------------
+	\subsection{Rotating figures}
+% ----------------------------------------------
+
+	The  {\ttfamily\small \textbackslash includegraphics} command also has an {\ttfamily angle} option which rotates the image by a given angle, measured in degrees. Listing \ref{lst:45degreeEESC} shows a 45-degree rotated logo, and figure \ref{fig:45degreeEESC} shows the results.
+
+\begin{lstlisting}[caption = {EESC logo rotated 45 degrees (figure \ref{fig:45degreeEESC}}), label = {lst:45degreeEESC}, style = prettyListing, language = tex]
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 3cm, angle = 45]{../images/uniLogo.pdf}
+	\caption{EESC logo rotated by 45 degrees.}
+	\label{fig:45degreeEESC}
+\end{figure}
+\end{lstlisting}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 3cm, angle = 45]{../images/uniLogo.pdf}
+	\caption{EESC logo rotated 45 degrees.}
+	\label{fig:45degreeEESC}
+\end{figure}
+
+% ----------------------------------------------
+	\section{Adding tables}
+% ----------------------------------------------
+
+	Tables are a straightforward way to display data. The APA Publication Manual does recommend a particular table format, which is achieved by the code in listing \ref{lst:basicTable}. The {\ttfamily table} environment is pretty much alike the figure one in that it takes the same alignment options, caption and label convention. So all alignment options for the figures apply here, as well as caption and label.
+
+\begin{itemize}
+	\item The {\ttfamily table} environment sets a floating type for the table which positioning parameters are the same as figures;
+	\item The {\ttfamily tabular} environment effectively code the table;
+	\item The {\ttfamily <Column alignment options>} are passed to the tabular environment to define how many columns a table has and each columns alignment option;
+	\item The {\ttfamily hline} command prints a horizontal line in the table spanning all of its width;
+	\item The {\ttfamily \textbackslash caption} command defines the table caption;
+	\item The {\ttfamily \textbackslash label} command defines a human-readable label by which the table can be referenced in the text.
+\end{itemize}
+
+\begin{lstlisting}[caption = {Basic table code}, label = {lst:basicTable}, style = prettyListing, language = tex]
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{<Column alignment options>}
+			\hline
+			<Header code> \\
+			\hline
+			<Rows code>\\
+			\hline
+		\end{tabular}
+		\caption{<Table caption>}
+		\label{<Human-readable label>}
+	\end{center}
+\end{table}
+\end{lstlisting}
+
+% ----------------------------------------------
+		\subsection{Coding your table}
+% ----------------------------------------------
+
+	Table coding is fairly simple, with a basic rule: cells are separeted by a {\ttfamily \&} character and rows are broken using a double backslash sequence \textbackslash \textbackslash. Table \ref{tab:exampleTable} shows an example table used to exemplify table coding; this table has three columns with the first one left-aligned and the other ones center-aligned.
+
+	Before inserting table data, is it important to input first the number of columns the table will have and the alignment of each column. This is done by passing the alignment options to the {\ttfamily tabular} environment.
+
+	Each column can be centered ({\ttfamily c}), left aligned ({\ttfamily l}) or right aligned ({\ttfamily r}). In the example table of listing \ref{tab:exampleTable}, this is done by passing the {\ttfamily \{l c c\}} option, which defines the table will have three columns and each columns alignment.
+
+	According to the APA Publication Manual, tables should have boldface headers. The header row should be separated by a horizontal line, at its top and bottom. Boldface is achieved by the {\ttfamily \textbackslash textbf\{\}} command and the horizontal line is achieved by the {\ttfamily hline} command.
+
+\begin{lstlisting}[caption = {Example table (table \ref{tab:exampleTable})}, label = {lst:exampleTable}, style = prettyListing, language = tex]
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{l c c}
+			\textbf{Name} & \textbf{Age} & \textbf{Height} (m) \\
+			\hline
+			John & 25 & 1.80\\
+			Mary & 34 & 1.72\\
+			Janett & 14 & 1.54\\
+			\hline
+		\end{tabular}
+		\caption{Age and height example table.}
+		\label{tab:exampleTable}
+	\end{center}
+\end{table}
+\end{lstlisting}
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{l c c}
+			\hline
+			\textbf{Name} & \textbf{Age} & \textbf{Height} (m) \\
+			\hline
+			John & 25 & 1.80\\
+			Mary & 34 & 1.72\\
+			Janett & 14 & 1.54\\
+			\hline
+		\end{tabular}
+		\caption{Age and height example table.}
+		\label{tab:exampleTable}
+	\end{center}
+\end{table}
+
+	First of all
