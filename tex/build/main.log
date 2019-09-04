@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.13)  4 SEP 2019 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.13)  4 SEP 2019 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1558,6 +1558,10 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@baselineskip=\dimen333
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+)
+(/usr/share/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box62
 ))
 
 LaTeX Warning: Unused global option(s):
@@ -1566,6 +1570,9 @@ LaTeX Warning: Unused global option(s):
 (build/main.aux
 
 LaTeX Warning: Label `lst:addingAcronym' multiply defined.
+
+
+LaTeX Warning: Label `tab:exampleTable' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -1668,7 +1675,7 @@ LaTeX Info: Redefining \selectfont on input line 46.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count369
 \scratchdimen=\dimen334
-\scratchbox=\box62
+\scratchbox=\box63
 \nofMPsegments=\count370
 \nofMParguments=\count371
 \everyMPshowfont=\toks37
@@ -1696,7 +1703,7 @@ e
 ))
 LaTeX Info: Redefining \[ on input line 46.
 LaTeX Info: Redefining \] on input line 46.
-\AtBeginShipoutBox=\box63
+\AtBeginShipoutBox=\box64
 Package hyperref Info: Link coloring OFF on input line 46.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1719,9 +1726,10 @@ LaTeX Info: Redefining \nameref on input line 46.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
+Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count376
-<../images/uniLogo.pdf, id=140, 2102.85625pt x 2218.2875pt>
+<../images/uniLogo.pdf, id=156, 2102.85625pt x 2218.2875pt>
 File: ../images/uniLogo.pdf Graphic file (type pdf)
 <use ../images/uniLogo.pdf>
 Package pdftex.def Info: ../images/uniLogo.pdf  used on input line 49.
@@ -2024,26 +2032,48 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [33] [34]
 
 LaTeX Font Warning: Font shape `T1/Rosario-LF/m/sc' undefined
-(Font)              using `T1/Rosario-LF/m/n' instead on input line 192.
+(Font)              using `T1/Rosario-LF/m/n' instead on input line 182.
 
-) (build/main.bbl [35] [36
 
-]
+LaTeX Warning: Reference `tab:exampleTableLimitedWidth' on page 35 undefined on
+ input line 201.
+
+[35]
+LaTeX Font Info:    Font shape `T1/Rosario-LF/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 236.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[36]
+Underfull \hbox (badness 1043) in paragraph at lines 345--345
+|\T1/ptm/m/n/10 Age and height ex-am-ple ta-ble
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (build/main.bbl [37] [38]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [37] [38
+) [39
 
-] [39] [40] (./appendixes/appendixA.tex
+] [40
 
-LaTeX Warning: Reference `eq:PVPanelModelModified' on page 41 undefined on inpu
+] [41] [42] (./appendixes/appendixA.tex
+
+LaTeX Warning: Reference `eq:PVPanelModelModified' on page 43 undefined on inpu
 t line 3.
 
 
-LaTeX Warning: Reference `tab:panelParameters' on page 41 undefined on input li
+LaTeX Warning: Reference `tab:panelParameters' on page 43 undefined on input li
 ne 3.
 
-<../images/pvPanelCurves/ivCurve.pdf, id=518, 1028.7472pt x 684.49985pt>
+<../images/pvPanelCurves/ivCurve.pdf, id=635, 1028.7472pt x 684.49985pt>
 File: ../images/pvPanelCurves/ivCurve.pdf Graphic file (type pdf)
 <use ../images/pvPanelCurves/ivCurve.pdf>
 Package pdftex.def Info: ../images/pvPanelCurves/ivCurve.pdf  used on input lin
@@ -2059,22 +2089,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 
-LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 41 undefined o
+LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 43 undefined o
 n input line 12.
 
 
-LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 41 undefined o
+LaTeX Warning: Reference `fig:pvCurveVaryingTemperature' on page 43 undefined o
 n input line 12.
 
-(../images/pvPanelCurves/mppTracking.py [41
+(../images/pvPanelCurves/mppTracking.py [43
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
@@ -2086,11 +2110,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]))
-(./appendixes/appendixB.tex [48] [49 <../images/pvPanelCurves/ivCurve.pdf>]
-[50
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]) [51]
+ [48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]))
+(./appendixes/appendixB.tex [50] [51 <../images/pvPanelCurves/ivCurve.pdf>]
+[52
+
+]) [53]
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -2119,13 +2149,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29737 strings out of 492623
- 478563 string characters out of 6135669
- 1072266 words of memory out of 5000000
- 32611 multiletter control sequences out of 15000+600000
+ 29921 strings out of 492623
+ 481572 string characters out of 6135669
+ 1074381 words of memory out of 5000000
+ 32715 multiletter control sequences out of 15000+600000
  652250 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,124p,906b,2273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,17n,124p,906b,2273s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/share/tex
 mf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/share/texmf-dist/fonts/en
 c/dvips/rosario/ros_c353pt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.e
@@ -2141,10 +2171,10 @@ hare/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texmf-dist/fon
 ts/type1/public/newtx/txsys.pfb></usr/share/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on build/main.pdf (53 pages, 313825 bytes).
+Output written on build/main.pdf (55 pages, 327868 bytes).
 PDF statistics:
- 1250 PDF objects out of 1440 (max. 8388607)
- 1131 compressed objects within 12 object streams
- 595 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1382 PDF objects out of 1440 (max. 8388607)
+ 1257 compressed objects within 13 object streams
+ 672 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

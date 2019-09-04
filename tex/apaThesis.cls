@@ -659,3 +659,8 @@
 \newcommand{\appendixpath}[1]{\def\theappendixpath{#1}}
 \newcommand{\addchapter}[1]{\input{\thechapterpath/#1}}
 \newcommand{\addappendix}[1]{\input{\theappendixpath/#1}}
+
+% -----------------------------------------------
+% (21) THREEPARTTABLE ENVIRONMENT FOR TABLES CONFIGURATION {{{1
+% -----------------------------------------------
+\usepackage{threeparttable}

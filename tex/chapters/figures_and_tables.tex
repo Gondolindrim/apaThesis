@@ -73,7 +73,7 @@
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 5cm, height = 3cm]{/uniLogo.pdf}
+	\includegraphics[width = 5cm, height = 3cm]{uniLogo.pdf}
 	\caption{Five centimeter wide, three centimeter tall EESC logo}
 	\label{fig:53cmEESC}
 \end{figure}
@@ -83,7 +83,7 @@
 \begin{lstlisting}[caption = {EESC logo with quarter the text column width (figure \ref{fig:quarterTextEESC}}), label = {lst:quarterTextEESC}, style = prettyListing, language = tex]
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.25\textwidth]{/uniLogo.pdf}
+	\includegraphics[width = 0.25\textwidth]{uniLogo.pdf}
 	\caption{EESC logo with a quarter the text column width}
 	\label{fig:quarterTextEESC}
 \end{figure}
@@ -91,7 +91,7 @@
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.25\textwidth]{/uniLogo.pdf}
+	\includegraphics[width = 0.25\textwidth]{uniLogo.pdf}
 	\caption{EESC logo with a quarter the text column width.}
 	\label{fig:quarterTextEESC}
 \end{figure}
@@ -105,7 +105,7 @@
 \begin{lstlisting}[caption = {EESC logo rotated 45 degrees (figure \ref{fig:45degreeEESC}}), label = {lst:45degreeEESC}, style = prettyListing, language = tex]
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 3cm, angle = 45]{/uniLogo.pdf}
+	\includegraphics[width = 3cm, angle = 45]{uniLogo.pdf}
 	\caption{EESC logo rotated by 45 degrees.}
 	\label{fig:45degreeEESC}
 \end{figure}
@@ -113,7 +113,7 @@
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 3cm, angle = 45]{/uniLogo.pdf}
+	\includegraphics[width = 3cm, angle = 45]{uniLogo.pdf}
 	\caption{EESC logo rotated 45 degrees.}
 	\label{fig:45degreeEESC}
 \end{figure}
@@ -179,6 +179,8 @@
 \end{lstlisting}
 
 \begin{table}[h]
+\caption{Age and height example table.}
+\label{tab:exampleTable}
 	\begin{center}
 		\begin{tabular}{l c c}
 			\hline
@@ -189,9 +191,190 @@
 			Janett & 14 & 1.54\\
 			\hline
 		\end{tabular}
-		\caption{Age and height example table.}
-		\label{tab:exampleTable}
 	\end{center}
 \end{table}
 
-	First of all
+% ----------------------------------------------
+		\subsection{Limited width caption}
+% ----------------------------------------------
+
+	The problem with table \ref{tab:exampleTable} is that the table caption must be limited to the table's width according to APA guidelines. To achieve this, the {\ttfamily threeparttable} package is used. Listing \ref{lst:exampleTableLimitedCaption} shows the code to generate a table which caption is limited to its width; table \ref{tab:exampleTableLimitedWidth} shows the results of such code.
+
+\begin{lstlisting}[caption = {Example table with limited caption width (table \ref{tab:exampleTableLimitedCaption})}, label = {lst:exampleTableLimitedCaption}, style = prettyListing, language = tex]
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}
+			\caption{Age and height example table with limited caption width.}
+			\label{tab:exampleTable}
+			\begin{tabular}{l c c}
+				\hline
+				\textbf{Name}\tnote{1} & \textbf{Age} & \textbf{Height} (m) \\
+				\hline
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\hline
+			\end{tabular}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+\end{lstlisting}
+
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}
+			\caption{Age and height example table with limited caption width.}
+			\label{tab:exampleTableLimitedCaption}
+			\begin{tabular}{l c c}
+				\hline
+				\textbf{Name} & \textbf{Age} & \textbf{Height} (m) \\
+				\hline
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\hline
+			\end{tabular}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+
+% ----------------------------------------------
+		\subsection{Adding notes to your table}
+% ----------------------------------------------
+
+	The {\ttfamily threeparttable} environment also allows you to add notes to your table through a {\ttfamily tablenotes} environment. Since the items cannot be labeled, the {\ttfamily \textbackslash tnote} command is used to denote where a particular note was used. Listing \ref{lst:exampleTableLimitedCaptionWithNotes} shows the coding for such a table, and table \ref{tab:exampleTableWithNotes} shows the result.
+
+\begin{lstlisting}[caption = {Example table with limited caption width and notes. (table \ref{tab:exampleTableWithNotes})}, label = {lst:exampleTableLimitedCaptionWithNotes}, style = prettyListing, language = tex]
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}
+			\caption{Age and height example table with limited caption and notes.}
+			\label{tab:exampleTableWithNotes}
+			\begin{tabular}{l c c}
+				\hline
+				\textbf{Name}\tnote{1} & \textbf{Age} & \textbf{Height} (m) \\
+				\hline
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\hline
+			\end{tabular}
+			\begin{tablenotes}[flushleft]
+				\item[1] Data obtained from volunteers inteervewed by the authors.
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+\end{lstlisting}
+
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}
+			\caption{Age and height example table with limited caption and notes.}
+			\label{tab:exampleTableWithNotes}
+			\begin{tabular}{l c c}
+				\hline
+				\textbf{Name}\tnote{1} & \textbf{Age} & \textbf{Height} (m) \\
+				\hline
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\hline
+			\end{tabular}
+			\begin{tablenotes}[flushleft]
+				\item[1] Data obtained from volunteers inteervewed by the authors.
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+
+% ----------------------------------------------
+		\subsection{Adjusting table row height}
+% ----------------------------------------------
+
+	If your table looks to ``populated'' with data, you can adjust the table row height using the {\ttfamily arraystretch} command. There are two problems with this approach:
+
+\begin{itemize}
+	\item The vertical cell aligment is missplaced. This does not become apparent for high table height values, but as you set higher values it becomes more apparent;
+	\item Also, once you renew the {\ttfamily arraystretch} command, the new value becomes default for the whole document from that point forward, affecting tables that come afterwards. To avoid this, a {\ttfamily \textbackslash begingroup} and {\ttfamily \textbackslash endgroup} approach is used, so that the new row height value is confined to that particular table.
+\end{itemize}
+
+	Listing \ref{lst:exampleTableAdjustedHeight} shows the code for a table with a 50\% added row height; table \ref{tab:exampleTableAdjustedHeight} shows the result.
+
+\begin{lstlisting}[caption = {Example table with limited caption width and notes. (table \ref{tab:exampleTableAdjustedHeight})}, label = {lst:exampleTableAdjustedHeight}, style = prettyListing, language = tex]
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}[h]
+			\label{tab:exampleTableAdjustedHeight}
+			\label{tab:exampleTable}
+			\begin{tabular}{l c  c}
+				\toprule
+				\textbf{Name} & \textbf{Age} & \textbf{Height (m)} \\
+				\midrule
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\bottomrule
+			\end{tabular}
+			\begin{tablenotes}[flushleft]
+				\item \textit{Note:} data obtained from volunteers inteervewed by the authors.
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+\endgroup
+\end{lstlisting}
+
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}[h]
+			\caption{Age and height example table with adjusted row height.}
+			\label{tab:exampleTableAdjustedHeight}
+			\begin{tabular}{l c c}
+				\toprule
+				\textbf{Name} & \textbf{Age} & \textbf{Height (m)} \\
+				\midrule
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\bottomrule
+			\end{tabular}
+			\begin{tablenotes}[flushleft]
+				\item \textit{Note:} data obtained from volunteers inteervewed by the authors.
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+\endgroup
+
+% ----------------------------------------------
+		\subsection{Adjusting table column width}
+% ----------------------------------------------
+
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+	\begin{center}
+		\begin{threeparttable}[h]
+			\caption{Age and height example table.}
+			\label{tab:exampleTable}
+			\begin{tabular}{m{3cm}<{\raggedright} p{3cm}<{\centering} p{3cm}<{\centering} }
+				\toprule
+				\textbf{Name}\tnote{1} & \textbf{Age} & \textbf{Height (m)} \\
+				\midrule
+				John & 25 & 1.80\\
+				Mary & 34 & 1.72\\
+				Janett & 14 & 1.54\\
+				\bottomrule
+			\end{tabular}
+			\begin{tablenotes}[flushleft]
+				\item[1] Data obtained from volunteers inteervewed by the authors.
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{center}
+\end{table}
+\endgroup
