@@ -1,7 +1,7 @@
 % -------------------------------------------------------------------
 % APA-Style thesis LaTeX Template
 % AUTHOR: Álvaro "Gondolindrim" Volpato (alvaro.volpato@usp.br)
-% VERSION: 1.1
+% VERSION: 1.1.1
 % PAGE: http://github.com/Gondolindrim/apaThesis
 % LICENSE: Creative-Commons Non-commercial Share-Alike
 %--------------------------------------------------------------------
@@ -65,7 +65,7 @@
 
 \ProcessOptions
 
-\usepackage[\papersize,top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\usepackage[\papersize,top=1in,bottom=0.5in,left=1in,right=1in]{geometry}
 
 % Custom paper size
 % \usepackage[paperwith=9in,paperheight=10in,top=1in,bottom=1in,left=1in,right=1in]{geometry}
@@ -80,24 +80,18 @@
 % -----------------------------------------------
 
 \usepackage{times}		% Loads the Times-Roman Fonts
-
 \usepackage{newtxmath}		% Loads the Times-Roman Math Fonts
 \usepackage{inconsolata}
-
 \usepackage{Rosario}
-
 \usepackage{lettrine}	% First capitalized letter at every chapter
-
 \usepackage{ragged2e}
 
 % -----------------------------------------------
 % (3) MATHEMATICAL PACKAGES {{{1
 % -----------------------------------------------
 
-\usepackage{amssymb}
 \usepackage{mathtools}
 \allowdisplaybreaks
-%\usepackage{steinmetz}
 \usepackage{cancel}
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
@@ -108,8 +102,6 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash$}m{#1}<{$}}
 \newlength{\mycolwd}                                         % array column width
 \setlength{\mycolwd}{5cm}% "width" of $e^{-\frac{i}{\hbar}|A|t$; largest element in array
-
-\DeclareMathOperator{\sat}{sat}
 
 \newenvironment{Array}[2]{
 	\begin{array}{*{#1}{@{} C {#2}@{} }}
@@ -146,20 +138,18 @@
 
 \usepackage{xcolor}
 \usepackage{graphicx}
-%\graphicspath{{./images/}}
 \definecolor{bluekeywords}{rgb}{0.13,0.13,1}
 \definecolor{greencomments}{rgb}{0,0.5,0}
 \definecolor{redstrings}{rgb}{0.9,0,0}
-\definecolor{DarkGreen}{rgb}{0.0,0.4,0.0}	% Comment color
+\definecolor{dark_green}{rgb}{0.0,0.4,0.0}	% Comment color
 \definecolor{highlight}{RGB}{250,250,240}	% Code highlight color
-\definecolor{Gray}{RGB}{120,120,120}		% Code highlight color
-\definecolor{Blue}{RGB}{0,0,255}
-\definecolor{Purple}{RGB}{255,0,255}
-\definecolorset{RGB}{a}{}{Pink,200,0,180;Blue,0,180,250;Green,50,180,50;Yellow,250,150,0;Red,250,0,100}
-\definecolorset{RGB}{stewart}{}{Blue,0,180,250;Pink,250,0,80;Yellow,250,180,0;Green,0,180,0}
+\definecolor{gray}{RGB}{120,120,120}		% Code highlight color
+\definecolor{blue}{RGB}{0,0,255}
+\definecolor{purple}{RGB}{255,0,255}
+\definecolorset{RGB}{a}{}{Pink,200,0,180;blue,0,180,250;Green,50,180,50;Yellow,250,150,0;Red,250,0,100}
+\definecolorset{RGB}{baby}{}{_blue,0,180,250;_pink,250,0,80;_yellow,250,180,0;_green,0,180,0}
 
-% Mathcolor command used to color parts of formulas. Code snippet obrained at
-% https://tex.stackexchange.com/questions/21598/how-to-color-math-symbolsa
+% Mathcolor command used to color parts of formulas. Code snippet obrained at https://tex.stackexchange.com/questions/21598/how-to-color-math-symbolsa
 % Usage: \mathcolor{<color>}{<formula>}
 \makeatletter
 \def\mathcolor#1#{\@mathcolor{#1}}
@@ -445,22 +435,22 @@
 	breakatwhitespace=false, % If true, only allows line breaks at white space
 	breaklines=true, % Automatic line breaking (prevents code from protruding outside the box)
 	captionpos=t, % Sets the caption position: b for bottom; t for top
-	commentstyle=\color{DarkGreen}\ttfamily, % Style of comments within the code - dark green courier font
+	commentstyle=\color{dark_green}\ttfamily, % Style of comments within the code - dark green courier font
 	deletekeywords={}, % If you want to delete any keywords from the current language separate them by commas
 	%escapeinside={\%}, % This allows you to escape to LaTeX using the character in the bracket
 	firstnumber=1, % Line numbers begin at line 1
 	frame=single, % Frame around the code box, value can be: none, leftline, topline, bottomline, lines, single, shadowbox
 	frameround=tttt, % Rounds the corners of the frame for the top left, top right, bottom left and bottom right positions
-	keywordstyle=\color{Blue}\bfseries\ttfamily, % Functions are bold and blue
+	keywordstyle=\color{blue}\bfseries\ttfamily, % Functions are bold and blue
 	morekeywords={}, % Add any functions no included by default here separated by commas
 	numbers=left, % Location of line numbers, can take the values of: none, left, right
 	numbersep=10pt, % Distance of line numbers from the code box
-	numberstyle=\tiny\color{Gray}, % Style used for line numbers
+	numberstyle=\tiny\color{gray}, % Style used for line numbers
 	rulecolor=\color{black}, % Frame border color
 	showstringspaces=false, % Don't put marks in string spaces
 	showtabs=false, % Display tabs in the code as lines
 	stepnumber=5, % The step distance between line numbers, i.e. how often will lines be numbered
-	stringstyle=\color{Purple}, % Strings are purple
+	stringstyle=\color{purple}, % Strings are purple
 	tabsize=2, % Number of spaces per tab in the code
 }
 
